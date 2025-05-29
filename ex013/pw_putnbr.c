@@ -20,3 +20,4 @@ void pw_putnbr(unsigned int nb)
         write(1, &str[i], 1);
     }
 }
+
