@@ -26,3 +26,8 @@ void pw_print_bits(void)
         write(1, "\n", 1);
     }
 }
+
+int main()
+{
+    pw_print_bits();
+}

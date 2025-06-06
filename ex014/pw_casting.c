@@ -1,18 +1,25 @@
-#include <stdio.h>
+#include <unistd.h>
 
-int pw_casting(float f)
+void pw_putnbr(unsigned int nb)
 {
-    int x = (int)f;
-    char y = (char)f;
-    int round = 0;
-    float rounding = f - (int)(f);
-    if (rounding >= 0.5)
+    char str[20];
+    int i = 0;
+
+    if (nb == 0)
     {
-        round = (int)f + 1;
+        char c = '0';
+        write(1, &c, 1);
+        return;
     }
-    else
+
+    while (nb > 0)
     {
-        round = (int)f;
+        str[i++] = (nb % 10) + '0';
+        nb = nb / 10;
     }
-    return x + y + round;
+
+    while (i--)
+    {
+        write(1, &str[i], 1);
+    }
 }

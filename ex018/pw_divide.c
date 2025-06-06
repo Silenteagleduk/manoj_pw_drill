@@ -11,8 +11,6 @@ int pw_divide(float *a, float *b, float *r)
      
     *r = *a / *b;
     return 0;
-    
-    return *r;
 
 }
 

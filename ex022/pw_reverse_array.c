@@ -6,7 +6,7 @@ void pw_reverse_array(int *arr, int size)
     int j = size - 1;
     int temp;
 
-    while (i < j)
+    while (i <= j)
     {
         temp = arr[i];
         arr[i] = arr[j];
